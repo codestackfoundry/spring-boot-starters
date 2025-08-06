@@ -94,8 +94,8 @@ Use **Conventional Commit** format:
 
 ```
 feat(mapstruct-starter): add support for scanning interfaces in additional packages
-fix(redis-starter): resolve TTL not applied on empty keys
-docs(mapstruct): improve README usage section
+fix(mapstruct-starter): resolve TTL not applied on empty keys
+docs(mapstruct-starter): improve README usage section
 ```
 
 ---
