@@ -55,6 +55,6 @@ publishing {
         }
     }
     repositories {
-        mavenLocal() // ✅ Use `mavenCentral()` or a remote repo for real publishing
+        mavenLocal()
     }
 }
