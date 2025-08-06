@@ -2,6 +2,12 @@
 
 A lightweight Spring Boot 3+ starter that **auto-registers MapStruct mappers** without requiring `componentModel = "spring"` in your `@Mapper` or `@MapperConfig`.
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Java 17+](https://img.shields.io/badge/java-17+-blue.svg)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)
+![Build](https://github.com/codestackfoundry/spring-boot-starters/actions/workflows/gradle.yml/badge.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
 ---
 
 ## ✨ Features
@@ -55,7 +61,7 @@ dependencies {
     <dependency>
         <groupId>com.codestackfoundry</groupId>
         <artifactId>mapstruct-spring-boot-starter</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
     </dependency>
 
     <!-- Required explicitly -->
@@ -149,7 +155,7 @@ Because:
 
 ## 🧪 Example Project
 
-See the [example-app](../example-app/) for a working Spring Boot demo with:
+See the [example-app](./example-app/) for a working Spring Boot demo with:
 - MapStruct mappers
 - JPA + H2
 - Auto-registered mappers via this starter
