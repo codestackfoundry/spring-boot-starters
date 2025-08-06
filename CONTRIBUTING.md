@@ -57,14 +57,14 @@ git checkout -b feat/mapstructstarter/custom-mapper-filter
 
 Please use the following prefixes to name your branches based on the type of change:
 
-| Prefix       | Meaning                                      | Example Branch Name                           |
-|--------------|----------------------------------------------|------------------------------------------------|
-| `feat/`      | Adding a new feature                         | `feat/mapstruct-custom-mapper-filter`         |
-| `fix/`       | Bug fix                                      | `fix/redis-starter-missing-cache-bean`        |
-| `docs/`      | Documentation-only changes                   | `docs/mapstruct-update-readme`                |
-| `chore/`     | Build process, dependencies, cleanup, etc.   | `chore/gradle-upgrade`                        |
-| `test/`      | Adding or improving tests                    | `test/redis-starter-integration-tests`        |
-| `refactor/`  | Refactoring code without changing behavior   | `refactor/mapstruct-internal-scanner`         |
+| Prefix       | Meaning                                      | Example Branch Name                        |
+|--------------|----------------------------------------------|--------------------------------------------|
+| `feat/`      | Adding a new feature                         | `feat/mapstruct-custom-mapper-filter`      |
+| `fix/`       | Bug fix                                      | `fix/mapstruct-starter-missing-config`     |
+| `docs/`      | Documentation-only changes                   | `docs/mapstruct-update-readme`             |
+| `chore/`     | Build process, dependencies, cleanup, etc.   | `chore/gradle-upgrade`                     |
+| `test/`      | Adding or improving tests                    | `test/mapstruct-starter-integration-tests` |
+| `refactor/`  | Refactoring code without changing behavior   | `refactor/mapstruct-internal-scanner`      |
 
 These conventions align with [Conventional Commits](https://www.conventionalcommits.org/) and help automate changelogs and releases.
 
