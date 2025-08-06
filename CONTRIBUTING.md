@@ -118,7 +118,7 @@ To run a specific example app:
 
 1. Push your branch:  
    `git push origin feat/<starter-name>-<feature>`
-2. Open a PR on the main repo
+2. Open a PR on the main repo 
 3. Add a clear description with context, screenshots (if applicable), and usage
 
 ---
