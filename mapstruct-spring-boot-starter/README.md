@@ -29,7 +29,7 @@ A lightweight Spring Boot 3+ starter that **auto-registers MapStruct mappers** w
 
 ```kotlin
 dependencies {
-    implementation("com.codestackfoundry:mapstruct-spring-boot-starter:0.0.1-SNAPSHOT")
+    implementation("com.codestackfoundry:mapstruct-spring-boot-starter:1.0.0")
 
     // Required explicitly
     kapt("org.mapstruct:mapstruct-processor:1.5.5.Final")
