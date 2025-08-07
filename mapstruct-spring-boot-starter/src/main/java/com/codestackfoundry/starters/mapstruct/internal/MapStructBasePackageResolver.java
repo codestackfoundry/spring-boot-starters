@@ -1,6 +1,6 @@
-package com.codestackfoundry.mapstructstarter.internal;
+package com.codestackfoundry.starters.mapstruct.internal;
 
-import com.codestackfoundry.mapstructstarter.config.MapStructProperties;
+import com.codestackfoundry.starters.mapstruct.config.MapStructProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,7 +22,7 @@ import java.util.List;
  *
  * @author Ritesh Chopade(codeswithritesh)
  *
- * @see com.codestackfoundry.mapstructstarter.config.MapStructProperties
+ * @see com.codestackfoundry.starters.mapstruct.config.MapStructProperties
  */
 public class MapStructBasePackageResolver {
 
