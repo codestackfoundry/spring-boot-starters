@@ -1,9 +1,9 @@
-package com.codestackfoundry.mapstructstarter.autoconfig;
+package com.codestackfoundry.starters.mapstruct.autoconfig;
 
-import com.codestackfoundry.mapstructstarter.config.MapStructProperties;
-import com.codestackfoundry.mapstructstarter.internal.MapStructBasePackageResolver;
-import com.codestackfoundry.mapstructstarter.support.MapperScanResult;
-import com.codestackfoundry.mapstructstarter.support.MapperScanUtils;
+import com.codestackfoundry.starters.mapstruct.config.MapStructProperties;
+import com.codestackfoundry.starters.mapstruct.internal.MapStructBasePackageResolver;
+import com.codestackfoundry.starters.mapstruct.support.MapperScanResult;
+import com.codestackfoundry.starters.mapstruct.support.MapperScanUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
@@ -23,7 +23,7 @@ import java.util.Set;
 /**
  * Registers MapStruct mapper implementation classes as Spring beans during application startup.
  *
- * <p>This class is imported by {@link com.codestackfoundry.mapstructstarter.autoconfig.MapStructAutoConfiguration}
+ * <p>This class is imported by {@link com.codestackfoundry.starters.mapstruct.autoconfig.MapStructAutoConfiguration}
  * and triggered automatically via {@code @EnableAutoConfiguration} when {@link org.mapstruct.Mapper}
  * is present on the classpath.
  *
@@ -37,8 +37,8 @@ import java.util.Set;
  * @author Ritesh Chopade(codeswithritesh)
  *
  * @see org.mapstruct.Mapper
- * @see com.codestackfoundry.mapstructstarter.config.MapStructProperties
- * @see com.codestackfoundry.mapstructstarter.support.MapperScanUtils
+ * @see com.codestackfoundry.starters.mapstruct.config.MapStructProperties
+ * @see com.codestackfoundry.starters.mapstruct.support.MapperScanUtils
  */
 public class MapStructImplRegistrar implements ImportBeanDefinitionRegistrar, EnvironmentAware {
 
@@ -48,8 +48,8 @@ public class MapStructImplRegistrar implements ImportBeanDefinitionRegistrar, En
     /**
      * Scans for MapStruct mapper implementations and registers them as Spring beans.
      *
-     * <p>Uses {@link com.codestackfoundry.mapstructstarter.config.MapStructProperties} to resolve base packages,
-     * and delegates scanning logic to {@link com.codestackfoundry.mapstructstarter.support.MapperScanUtils}.
+     * <p>Uses {@link com.codestackfoundry.starters.mapstruct.config.MapStructProperties} to resolve base packages,
+     * and delegates scanning logic to {@link com.codestackfoundry.starters.mapstruct.support.MapperScanUtils}.
      *
      * @param metadata the metadata of the class importing this configuration
      * @param registry the bean definition registry used to register mapper beans

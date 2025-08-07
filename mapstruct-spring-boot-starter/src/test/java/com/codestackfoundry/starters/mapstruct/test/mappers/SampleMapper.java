@@ -1,4 +1,4 @@
-package com.codestackfoundry.mapstructstarter.test.mappers;
+package com.codestackfoundry.starters.mapstruct.test.mappers;
 
 import org.mapstruct.Mapper;
 

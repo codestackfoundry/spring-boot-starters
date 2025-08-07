@@ -1,4 +1,4 @@
-package com.codestackfoundry.mapstructstarter.autoconfig;
+package com.codestackfoundry.starters.mapstruct.autoconfig;
 
 import org.mapstruct.Mapper;
 import org.springframework.boot.autoconfigure.AutoConfiguration;

@@ -59,7 +59,7 @@ dependencies {
 ```xml
 <dependencies>
     <dependency>
-        <groupId>com.codestackfoundry</groupId>
+        <groupId>com.codestackfoundry.starters</groupId>
         <artifactId>mapstruct-spring-boot-starter</artifactId>
         <version>1.0.0</version>
     </dependency>

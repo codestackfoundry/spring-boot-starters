@@ -1,10 +1,9 @@
-package com.codestackfoundry.mapstructstarter.autoconfig;
+package com.codestackfoundry.starters.mapstruct.autoconfig;
 
-import com.codestackfoundry.mapstructstarter.test.mappers.SampleMapper;
+import com.codestackfoundry.starters.mapstruct.test.mappers.SampleMapper;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.Mapper;
 import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.boot.test.context.FilteredClassLoader;
 
@@ -19,7 +18,7 @@ class MapStructAutoConfigurationTest {
     @Test
     void autoConfigIsLoadedWhenMapperClassIsPresent() {
         contextRunner
-                .withPropertyValues("mapstruct.base-packages=com.codestackfoundry.mapstructstarter.test.mappers")
+                .withPropertyValues("mapstruct.base-packages=com.codestackfoundry.starters.mapstruct.test.mappers")
                 .run(context -> {
             assertThat(context).hasSingleBean(MapStructAutoConfiguration.class);
                     assertThat(context).hasBean("sampleMapperImpl"); // this is correct bean name
@@ -41,7 +40,7 @@ class MapStructAutoConfigurationTest {
     @Test
     void shouldRegisterMapperBeanWhenBasePackageIsSet() {
         contextRunner
-                .withPropertyValues("mapstruct.base-packages=com.codestackfoundry.mapstructstarter.test.mappers")
+                .withPropertyValues("mapstruct.base-packages=com.codestackfoundry.starters.mapstruct.test.mappers")
                 //.withUserConfiguration(SampleMapperTestConfig.class)
                 .run(context -> {
                     assertThat(context).hasSingleBean(SampleMapper.class);

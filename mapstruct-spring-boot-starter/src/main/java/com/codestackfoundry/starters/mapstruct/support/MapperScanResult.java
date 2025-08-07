@@ -1,4 +1,4 @@
-package com.codestackfoundry.mapstructstarter.support;
+package com.codestackfoundry.starters.mapstruct.support;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package com.codestackfoundry.mapstructstarter.config;
+package com.codestackfoundry.starters.mapstruct.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
