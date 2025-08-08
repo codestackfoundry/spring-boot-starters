@@ -7,9 +7,9 @@ Each starter is designed to simplify integration with commonly used libraries an
 
 ## 📦 Available Starters
 
-| Starter Name                     | Description                                      | Docs / Usage                  |
-|----------------------------------|--------------------------------------------------|-------------------------------|
-| [`mapstruct-spring-boot-starter`](./mapstruct-spring-boot-starter) | Auto-register MapStruct mappers without `@Component` | [Usage](./mapstruct-spring-boot-starter/README.md) |
+| Starter Name                     | Description                                                                                                                                                   | Docs / Usage                  |
+|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| [`mapstruct-spring-boot-starter`](./mapstruct-spring-boot-starter) | Seamless Spring Boot 3+ MapStruct Starter – Auto-registers mappers without `componentModel = "spring"` or `@Component`, with production-ready auto-configuration. | [Usage](./mapstruct-spring-boot-starter/README.md) |
 
 > ⚙️ More starters coming soon.
 

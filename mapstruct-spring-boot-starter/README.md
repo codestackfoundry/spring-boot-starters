@@ -1,6 +1,6 @@
 # MapStruct Spring Boot Starter
 
-A lightweight Spring Boot 3+ starter that **auto-registers MapStruct mappers** without requiring `componentModel = "spring"` in your `@Mapper` or `@MapperConfig`.
+A lightweight Spring Boot 3+ MapStruct Starter – Auto-registers MapStruct mappers without `componentModel = "spring"` in your `@Mapper` or `@MapperConfig`. Includes production-ready auto-configuration and customizable mapper scanning via `application.yml`.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Java 17+](https://img.shields.io/badge/java-17+-blue.svg)
