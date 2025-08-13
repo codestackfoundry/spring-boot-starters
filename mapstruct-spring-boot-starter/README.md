@@ -29,10 +29,10 @@ A lightweight Spring Boot 3+ MapStruct Starter – Auto-registers MapStruct mapp
 
 ```kotlin
 dependencies {
-    implementation("com.codestackfoundry.starters:mapstruct-spring-boot-starter:1.0.0")
+    implementation("com.codestackfoundry.starters:mapstruct-spring-boot-starter:1.0.1")
 
     // Required explicitly
-    kapt("org.mapstruct:mapstruct-processor:1.5.5.Final")
+    kapt("org.mapstruct:mapstruct-processor:1.6.3")
 }
 ```
 
@@ -47,10 +47,10 @@ plugins {
 
 ```groovy
 dependencies {
-    implementation 'com.codestackfoundry.starters:mapstruct-spring-boot-starter:1.0.0'
+    implementation 'com.codestackfoundry.starters:mapstruct-spring-boot-starter:1.0.1'
 
     // Required explicitly
-    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
 }
 ```
 
@@ -61,14 +61,14 @@ dependencies {
     <dependency>
         <groupId>com.codestackfoundry.starters</groupId>
         <artifactId>mapstruct-spring-boot-starter</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </dependency>
 
     <!-- Required explicitly -->
     <dependency>
         <groupId>org.mapstruct</groupId>
         <artifactId>mapstruct-processor</artifactId>
-        <version>1.5.5.Final</version>
+        <version>1.6.3</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
@@ -164,9 +164,9 @@ See the [example-app](./example-app/) for a working Spring Boot demo with:
 
 ## ✅ Compatibility
 
-- Spring Boot `3.0+`
+- Spring Boot `3.1+`
 - Java `17+`
-- MapStruct `1.5+`
+- MapStruct `1.6+`
 - Kotlin via `kapt` also supported
 
 ---

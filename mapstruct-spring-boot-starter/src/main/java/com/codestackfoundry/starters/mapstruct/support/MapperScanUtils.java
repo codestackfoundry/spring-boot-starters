@@ -34,6 +34,9 @@ public class MapperScanUtils {
 
     private static final Logger log = LoggerFactory.getLogger(MapperScanUtils.class);
 
+
+    private MapperScanUtils(){ }
+
     /**
      * Finds all MapStruct-generated mapper implementation classes within the given base package.
      *

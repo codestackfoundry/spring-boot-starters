@@ -24,4 +24,6 @@ import org.springframework.context.annotation.Import;
 @ConditionalOnClass(Mapper.class)
 @Import(MapStructImplRegistrar.class)
 public class MapStructAutoConfiguration {
+
+    private MapStructAutoConfiguration() {}
 }
