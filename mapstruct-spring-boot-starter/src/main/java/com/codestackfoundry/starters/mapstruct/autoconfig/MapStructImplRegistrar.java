@@ -46,6 +46,13 @@ public class MapStructImplRegistrar implements ImportBeanDefinitionRegistrar, En
     private Environment environment;
 
     /**
+     * Public no-argument constructor.
+     *
+     * Needed for Spring Boot's auto-configuration mechanism to instantiate
+     * this registrar class when loading MapStruct mappers dynamically.
+     */
+    public MapStructImplRegistrar() { }
+    /**
      * Scans for MapStruct mapper implementations and registers them as Spring beans.
      *
      * <p>Uses {@link com.codestackfoundry.starters.mapstruct.config.MapStructProperties} to resolve base packages,

@@ -29,6 +29,13 @@ public class MapStructBasePackageResolver {
     private static final Logger log = LoggerFactory.getLogger(MapStructBasePackageResolver.class);
 
     /**
+     * Default no-argument constructor.
+     *
+     * Required for frameworks or tools (e.g., Spring, serialization libraries,
+     * or reflection utilities) that instantiate this class via reflection.
+     */
+    public MapStructBasePackageResolver() {}
+    /**
      * Resolves the base packages to scan for MapStruct mappers.
      *
      * <p>Resolution priority:

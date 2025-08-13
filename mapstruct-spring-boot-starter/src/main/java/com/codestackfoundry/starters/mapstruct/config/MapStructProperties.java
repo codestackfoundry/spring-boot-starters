@@ -43,18 +43,50 @@ public class MapStructProperties {
      */
     private boolean failIfNoMappers = false;
 
+    /**
+     * Default no-argument constructor.
+     * <p>
+     * Required for property binding frameworks (e.g., Spring Boot's
+     * {@code @ConfigurationProperties}) to instantiate the class.
+     */
+    public MapStructProperties() {}
+
+    /**
+     * Returns the list of base packages to scan for MapStruct mappers.
+     *
+     * @return list of package names
+     */
     public List<String> getBasePackages() {
         return basePackages;
     }
 
+    /**
+     * Sets the base packages to scan for MapStruct mappers.
+     *
+     * @param basePackages list of package names
+     */
     public void setBasePackages(List<String> basePackages) {
         this.basePackages = basePackages;
     }
 
+    /**
+     * Indicates whether an exception should be thrown if no
+     * MapStruct mappers are found during scanning.
+     *
+     * @return {@code true} if failure is required when no mappers are found;
+     *         {@code false} otherwise
+     */
     public boolean isFailIfNoMappers() {
         return failIfNoMappers;
     }
 
+    /**
+     * Sets whether an exception should be thrown if no MapStruct
+     * mappers are found during scanning.
+     *
+     * @param failIfNoMappers {@code true} to fail when no mappers are found;
+     *                        {@code false} to ignore
+     */
     public void setFailIfNoMappers(boolean failIfNoMappers) {
         this.failIfNoMappers = failIfNoMappers;
     }
