@@ -131,7 +131,8 @@ public interface UserMapper {
 
 By default, the starter will try to infer the base package from your `@SpringBootApplication` class.
 
-To override it, specify in `application.yml`:
+To override it, 
+#### Using `application.yml`
 
 ```yaml
 mapstruct:
@@ -139,6 +140,14 @@ mapstruct:
     - com.example.demo.mapper
     - com.shared.mappers
   fail-if-no-mappers: true
+```
+
+#### Using `application.properties`
+
+```properties
+mapstruct.base-packages[0]=com.example.demo.mapper
+mapstruct.base-packages[1]=com.shared.mappers
+mapstruct.fail-if-no-mappers=true
 ```
 
 ---
