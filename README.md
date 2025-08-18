@@ -3,6 +3,10 @@
 A collection of high-quality, production-ready Spring Boot starters developed and maintained by the [CodestackFoundry](https://github.com/codestackfoundry) team.  
 Each starter is designed to simplify integration with commonly used libraries and patterns, with minimal configuration and sensible defaults.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/codestackfoundry/spring-boot-starters/blob/main/LICENSE)
+[![Build](https://github.com/codestackfoundry/spring-boot-starters/actions/workflows/gradle.yml/badge.svg)](https://github.com/codestackfoundry/spring-boot-starters/actions)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/codestackfoundry/spring-boot-starters/blob/main/CONTRIBUTING.md)
+
 ---
 
 ## 📦 Available Starters
