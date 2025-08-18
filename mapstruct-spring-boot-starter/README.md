@@ -2,11 +2,9 @@
 
 A lightweight Spring Boot 3+ MapStruct Starter – Auto-registers MapStruct mappers without `componentModel = "spring"` in your `@Mapper` or `@MapperConfig`. Includes production-ready auto-configuration and customizable mapper scanning via `application.yml`.
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Java 17+](https://img.shields.io/badge/java-17+-blue.svg)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)
-![Build](https://github.com/codestackfoundry/spring-boot-starters/actions/workflows/gradle.yml/badge.svg)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+[![Maven Central](https://img.shields.io/maven-central/v/com.codestackfoundry.starters/mapstruct-spring-boot-starter)](https://central.sonatype.com/artifact/com.codestackfoundry.starters/mapstruct-spring-boot-starter)
+[![Java 17+](https://img.shields.io/badge/java-17+-blue.svg)](https://openjdk.org/projects/jdk/17/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
 
 ---
 
@@ -18,6 +16,42 @@ A lightweight Spring Boot 3+ MapStruct Starter – Auto-registers MapStruct mapp
 - ✅ Supports YAML and properties-based configuration
 - ✅ Fails fast (optional) when no mappers are found
 - ✅ Works with both Java and Kotlin (via kapt)
+
+---
+
+## 🔥 Before vs. After
+
+**❌ Before (manual config):**
+```java
+// Mapper with Spring component model
+@Mapper(componentModel = "spring")
+public interface UserMapper {
+    UserDto toDto(User user);
+    User toEntity(UserDto dto);
+}
+```
+Or
+```java
+@Configuration
+public class MapperConfig {
+    @Bean
+    public UserMapper userMapper() {
+        return Mappers.getMapper(UserMapper.class);
+    }
+}
+```
+
+**✅ After (with starter):**
+```java
+// No @ComponentModel, no config required
+@Mapper
+public interface UserMapper {
+    UserDto toDto(User user);
+    User toEntity(UserDto dto);
+}
+
+// Automatically registered by the starter 🎉
+```
 
 ---
 
@@ -150,6 +184,15 @@ Because:
 - It's intrusive in mapper code
 - Makes portability between non-Spring modules harder
 - With this starter, mappers are clean POJOs and Spring handles wiring via auto-configuration
+
+---
+
+## 📊 Why Use This Starter?
+
+- No more repetitive `componentModel = "spring"`.
+- No bean boilerplate.
+- Works out of the box with Spring Boot auto-configuration.
+- Cleaner mappers, faster setup.
 
 ---
 
