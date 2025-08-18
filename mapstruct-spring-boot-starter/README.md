@@ -225,7 +225,7 @@ See the [example-app](./example-app/) for a working Spring Boot demo with:
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](../LICENSE).
 
 ---
 
