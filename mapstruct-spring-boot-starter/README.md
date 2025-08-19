@@ -5,6 +5,8 @@ A lightweight Spring Boot 3+ MapStruct Starter – Auto-registers MapStruct mapp
 [![Maven Central](https://img.shields.io/maven-central/v/com.codestackfoundry.starters/mapstruct-spring-boot-starter)](https://central.sonatype.com/artifact/com.codestackfoundry.starters/mapstruct-spring-boot-starter)
 [![Java 17+](https://img.shields.io/badge/java-17+-blue.svg)](https://openjdk.org/projects/jdk/17/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
+[![Docs](https://img.shields.io/badge/docs-available-brightgreen.svg)](https://codestackfoundry.com/docs/mapstruct-spring-boot-starter.html)
+
 
 ---
 
@@ -59,25 +61,7 @@ public interface UserMapper {
 
 ### 1. Add the dependency
 
-#### Gradle (Kotlin DSL)
-
-```kotlin
-dependencies {
-    implementation("com.codestackfoundry.starters:mapstruct-spring-boot-starter:1.0.1")
-
-    // Required explicitly
-    kapt("org.mapstruct:mapstruct-processor:1.6.3")
-}
-```
-
-> ✅ You must also apply the kapt plugin if using Kotlin:
-```kotlin
-plugins {
-    kotlin("kapt")
-}
-```
-
-#### Gradle (Groovy DSL)
+#### Gradle
 
 ```groovy
 dependencies {
@@ -97,17 +81,37 @@ dependencies {
         <artifactId>mapstruct-spring-boot-starter</artifactId>
         <version>1.0.1</version>
     </dependency>
-
-    <!-- Required explicitly -->
-    <dependency>
-        <groupId>org.mapstruct</groupId>
-        <artifactId>mapstruct-processor</artifactId>
-        <version>1.6.3</version>
-        <scope>provided</scope>
-    </dependency>
 </dependencies>
-```
 
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+                <source>17</source> <!-- or your project’s Java version -->
+                <target>17</target>
+                <annotationProcessorPaths>
+                    <path>
+                        <groupId>org.mapstruct</groupId>
+                        <artifactId>mapstruct-processor</artifactId>
+                        <version>1.6.3</version>
+                    </path>
+                </annotationProcessorPaths>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
+```
+#### MapStruct Processor Requirement
+
+MapStruct generates the mapper implementations at compile time using an annotation processor.
+To enable this, you must add ``` mapstruct-processor ``` to your build configuration.
+
+⚠️ Without ```mapstruct-processor```, no mapper implementations will be generated.
+The starter itself does not provide this dependency.
 ---
 
 ### 2. Define your mappers
@@ -164,8 +168,8 @@ mapstruct.fail-if-no-mappers=true
 ## 📦 How It Works
 
 1. Scans base packages for interfaces annotated with `@Mapper`
-2. Uses [Reflections](https://github.com/ronmamo/reflections) to detect their generated implementations
-3. Registers the implementation class as a Spring bean **only if** it’s not already annotated with `@Component`
+2. Detect their generated implementations
+3. Registers the implementation class as a Spring bean **only if** it’s not already annotated with `@Component` or not marked as `componentModel = "spring"`
 
 ---
 
@@ -202,6 +206,13 @@ Because:
 - No bean boilerplate.
 - Works out of the box with Spring Boot auto-configuration.
 - Cleaner mappers, faster setup.
+
+---
+
+## 📖 Documentation
+
+Full documentation is available here:  
+👉 [MapStruct Spring Boot Starter Docs](https://codestackfoundry.com/docs/mapstruct-spring-boot-starter.html)
 
 ---
 
