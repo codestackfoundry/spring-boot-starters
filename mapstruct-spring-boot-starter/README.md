@@ -6,6 +6,7 @@ A lightweight Spring Boot 3+ MapStruct Starter – Auto-registers MapStruct mapp
 [![Java 17+](https://img.shields.io/badge/java-17+-blue.svg)](https://openjdk.org/projects/jdk/17/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![Docs](https://img.shields.io/badge/docs-available-brightgreen.svg)](https://codestackfoundry.com/docs/mapstruct-spring-boot-starter.html)
+[![GitHub Discussions](https://img.shields.io/badge/discussions-join-blue.svg)](https://github.com/codestackfoundry/spring-boot-starters/discussions)
 
 
 ---
@@ -32,6 +33,22 @@ public interface UserMapper {
     User toEntity(UserDto dto);
 }
 ```
+Or
+
+```java
+//Mapper Config for centralize configuration
+@MapperConfig(componentModel = "spring")
+public interface CentralMapperConfig {
+}
+
+//Add config in every mapper
+@Mapper(config = CentralMapperConfig.class)
+public interface UserMapper {
+    UserDto toDto(User user);
+    User toEntity(UserDto dto);
+}
+```
+
 Or
 ```java
 @Configuration
