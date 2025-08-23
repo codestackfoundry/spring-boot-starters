@@ -12,13 +12,12 @@ Each starter is a standalone module with its own example app and build configura
 
 ```
 spring-boot-starters/
-├── settings.gradle.kts
-├── build.gradle.kts
+├── pom.xml
 ├── mapstruct-spring-boot-starter/
-│   ├── build.gradle.kts
+│   ├── pom.xml
 │   ├── src/
 │   └── example-app/
-│       ├── build.gradle.kts
+│       ├── pom.xml
 │       └── src/
 ```
 
