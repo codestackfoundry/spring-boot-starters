@@ -8,10 +8,9 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.4</version>
+        <version>3.2.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <!-- Root project coordinates -->
     <groupId>com.codestackfoundry.starters</groupId>
     <artifactId>spring-boot-starters</artifactId>
     <version>1.0.1</version>
@@ -20,8 +19,8 @@
     <name>spring-boot-starters</name>
     <description>Parent POM for Spring Boot starter modules</description>
 
-    <!-- Centralized properties -->
     <properties>
+        <spring.boot.version>3.2.3</spring.boot.version>
         <java.version>17</java.version>
         <mapstruct.version>1.6.3</mapstruct.version>
         <reflections.version>0.10.2</reflections.version>
@@ -34,12 +33,13 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>3.3.4</version>
+                <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <modules>
         <module>mapstruct-spring-boot-starter</module>
